@@ -1,0 +1,137 @@
+/** styles for main navigation block **/
+
+.navigation-main
+  position: relative
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+.navigation-main__logo
+  display: block
+  float: left
+  text-align: center
+  //margin-bottom: 40px
+
+.navigation-main__logo-title
+  font-family: 'Kadwa', serif
+  font-size: 22px
+  font-weight: 400
+  line-height: 30px
+
+.navigation-main__title-first
+  color: $accent-font-color
+
+.navigation-main__title-second
+  color: $helper-font-color
+
+.navigation-main__logo-note
+  font-family: 'Kadwa', serif
+  font-size: 14px
+  font-weight: 400
+  line-height: 24px
+  color: $helper-font-color
+
+.navigation-main__menu-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+  word-spacing: 20px
+  float: right
+
+.navigation-main__menu-item
+  display: inline-block
+  word-spacing: normal
+
+.navigation-main__link
+  display: inline-block
+  position: relative
+  font-family: Kadwa, serif
+  color: $helper-font-color
+  font-size: 14px
+  letter-spacing: 0.07em
+  font-weight: 400
+  line-height: 42px
+  &:before
+    content: ''
+    display: block
+    width: 100%
+    height: 1px
+    position: absolute
+    bottom: 0
+    left: 0
+    transform: scaleX(0)
+    transition-property: transform
+    transition-duration: 0.4s
+    background-color: $helper-font-color
+  &:hover
+    &:before
+      transform: scaleX(1)
+
+.navigation-main__link_active
+  position: relative
+  &:before
+    content: ''
+    display: block
+    width: 100%
+    height: 1px
+    position: absolute
+    transform: scaleX(1)
+    bottom: 0
+    left: 0
+    background-color: $helper-font-color
+
+.navigation-main__minimize-icon
+  display: none
+  float: right
+  width: 45px
+  height: 35px
+  position: relative
+  cursor: pointer
+
+.navigation-main__minimize-icon-line
+  display: block
+  position: absolute
+  height: 9px
+  border-radius: 9px
+  transform: rotate(0deg)
+  background-color: $helper-font-color
+
+.navigation-main__minimize-icon-line
+  &:nth-child(1)
+    left: 0
+    top: 0
+    width: 100%
+  &:nth-child(2), &:nth-child(3)
+    left: 0
+    top: 13px
+    width: 100%
+  &:nth-child(4)
+    left: 0
+    top: 26px
+    width: 100%
+
+.navigation-main__minimize-icon_opened
+  .navigation-main__minimize-icon-line
+    &:nth-child(1), &:nth-child(4)
+      top: 18px
+      left: 50%
+      width: 0
+    &:nth-child(2)
+      transform: rotate(45deg)
+    &:nth-child(3)
+      transform: rotate(-45deg)
+
+/** main navigation block minimase point **/
+
+@media screen and (max-width: 991px)
+  .navigation-main__menu-list
+    float: left
+    clear: left
+    height: 0
+    overflow: hidden
+  .navigation-main__menu-item
+    display: block
+  .navigation-main__minimize-icon
+    display: block
+

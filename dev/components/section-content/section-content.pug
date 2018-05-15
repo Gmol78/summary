@@ -1,0 +1,17 @@
+include ../header-base/header-base.pug
+mixin section-content(name, data)
+    section.section-content&attributes(attributes)
+        .container
+            +header-base(name).section-content__header
+            ul.section-content__list
+                -for(var i =0; i< data.length; i++) {
+                    li.section-content__list-item
+                        -for(var j =0; j< data[i].length; j++) {
+                            -if (!data[i][j].link) {
+                                p.section-content__paragraph=data[i][j].text
+                            - }
+                            - else {
+                                a.section-content__link(href=data[i][j].link)=data[i][j].text
+                            - }
+                            - }
+                        - }

@@ -1,0 +1,34 @@
+/** styles for content sections **/
+
+.section-content
+  overflow: auto
+
+.section-content__header
+  margin-top: 30px
+
+.section-content__list
+  padding-left: 25px
+
+.section-content__list-item
+  +base-font(16px)
+  font-weight: 400
+  line-height: 24px
+  color: $base-font-color
+  padding: 10px 0
+
+.section-content__paragraph
+  margin: 0
+
+.section-content__link
+  color: $helper-accent-color
+  &:hover
+    color: $accent-font-color
+
+.section-content_dark
+  background-color: $darky-backgr
+
+.section-content_darky
+  background-color: $lightly-backgr
+
+.section-content_light
+  background-color: $light-backgr

@@ -1,0 +1,32 @@
+mixin navigation-main(active_item)
+    -
+        var menu_list = {
+        'ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ': '#skils',
+        'ПРОЕКТЫ': '#projects',
+        'О СЕБЕ': '#about',
+        'КОНТАКТЫ': '#contacts',
+        'СКАЧАТЬ': 'download.php'
+        }
+    nav(id='main-nav' class='navigation-main')&attributes(attributes)
+        a.navigation-main__logo(href='index.html')
+            .navigation-main__logo-title
+                span.navigation-main__title-first
+                    |WEB
+                |
+                |
+                span.navigation-main__title-second
+                    |разработчик
+            .navigation-main__logo-note
+                |МОЛОЧНИКОВ ИГОРЬ
+        .navigation-main__minimize-icon
+            span.navigation-main__minimize-icon-line
+            span.navigation-main__minimize-icon-line
+            span.navigation-main__minimize-icon-line
+            span.navigation-main__minimize-icon-line
+        ul.navigation-main__menu-list
+            - var list = menu_list
+            - for (var item in list)
+                li.navigation-main__menu-item
+                    a.navigation-main__link(class=(active_item === item) ? 'navigation-main__link_active': '', href=(active_item === item )? '#': list[item])=item
+
+

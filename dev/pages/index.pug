@@ -1,0 +1,47 @@
+extends ./templates/layout.pug
+
+block content
+    include ../components/section-education/section-education.pug
+    include ../components/section-content/section-content.pug
+    -
+        var data_skils = [
+            [{'text': 'адаптивная верстка под различные устройства, как с применением библиотеки bootstrap, так и без неё.'}],
+            [{'text': 'подключаю и настраиваю требуемые js и jquery- плагины, пишу свои небольшие компоненты  на javascript.'}],
+            [{'text': 'применяю css -препроцессор SASS, HTML – шаблонизатор Pug.'}],
+            [{'text': 'знаком и применяю методологию БЭМ'}],
+            [{'text': 'знаком и использую сборщик Gulp.'}],
+            [{'text': 'PHP базовый уровень, знаком с ООП, концепцией MVC - выполнял учебные проекты.'}],
+            [{'text': 'знаком с Yii2  - выполнял учебный проект.'}],
+            [{'text': 'знаком и использую Git.'}]
+        ]
+    +section-content('ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ', data_skils).section-content_light#skils
+    -
+        var data_projects = [
+        [
+            {'text': 'верстка для команды "NetGon"'},
+            {'link': 'https://themeforest.net/item/shlok-construction-and-architect-html-template/21155081?s_rank=3',
+            'text': 'Shlok'},
+            {'text': '(исходный код предоставлю по запросу)'}
+        ],
+        [
+            {'link': 'https://github.com/Gmol78/responsive-menu',
+             'text': 'отзывчивое main-nav (pug, js, sass)'}
+        ]
+        ]
+    +section-content('ПРОЕКТЫ', data_projects).section-content_dark#projects
+    -
+        var data_about = [
+            [{'text': 'умею работать в команде, адекватно отношусь к трудностям  и всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».'},
+             {'text': 'Сохраняю и поддерживаю товарищескую атмосферу.  Умею «дожать» проект.'}
+            ],
+            [{'text': 'готов к выполнению тестовых заданий.'}]
+
+        ]
+    +section-content('О СЕБЕ', data_about).section-content_light#about
+    -
+        var data_contacts = [
+        [{'text': 'телефон: +7-903-840-04-00; +7-953-422-74-91'}],
+        [{'link':'mailto:steklodekor@inbox.ru', 'text': 'e-mal: steklodekor@inbox.ru'}],
+        [{'text': 'skype: igor_mol78'}]
+        ]
+    +section-content('КОНТАКТЫ', data_contacts).section-content_dark#contacts

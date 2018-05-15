@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Резюме</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navigation-main" id="main-nav">
+                <a class="navigation-main__logo" href="index.html">
+                    <div class="navigation-main__logo-title">
+                        <span class="navigation-main__title-first">WEB</span>
+                        <span class="navigation-main__title-second">разработчик</span>
+                    </div>
+                    <div class="navigation-main__logo-note">МОЛОЧНИКОВ ИГОРЬ</div>
+                </a>
+                <div class="navigation-main__minimize-icon">
+                    <span class="navigation-main__minimize-icon-line"></span>
+                    <span class="navigation-main__minimize-icon-line"></span>
+                    <span class="navigation-main__minimize-icon-line"></span>
+                    <span class="navigation-main__minimize-icon-line"></span>
+                </div>
+                <ul class="navigation-main__menu-list">
+                    <li class="navigation-main__menu-item">
+                        <a class="navigation-main__link" href="#skils">ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ</a>
+                    </li>
+                    <li class="navigation-main__menu-item">
+                        <a class="navigation-main__link" href="#projects">ПРОЕКТЫ</a>
+                    </li>
+                    <li class="navigation-main__menu-item">
+                        <a class="navigation-main__link" href="#about">О СЕБЕ</a>
+                    </li>
+                    <li class="navigation-main__menu-item">
+                        <a class="navigation-main__link" href="#contacts">КОНТАКТЫ</a>
+                    </li>
+                    <li class="navigation-main__menu-item">
+                        <a class="navigation-main__link" href="download.php">СКАЧАТЬ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section-education">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 order-2 order-lg-1">
+                    <h3 class="section-education__header-name">Молочников Игорь Владимирович</h3>
+                    <ul class="section-education__list">
+                        <li class="section-education__list-item">Дата рождения: 15 июля 1978г.</li>
+                        <li class="section-education__list-item">Семейное положение: женат, трое детей</li>
+                    </ul>
+                    <h3 class="section-education__header-education">Образование</h3>
+                    <ul class="section-education__list">
+                        <li class="section-education__list-item">
+                            ТулГУ(1995-2001). Технологические машины и оборудование. Диплом с отличием.
+                        </li>
+                        <li class="section-education__list-item">Аспирантура ТулГУ (2001-2004)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 order-1 order-lg-1">
+                    <div class="section-education__img-box">
+                        <img class="section-education__img" src="img/myfoto.jpg" alt="my foto" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-content section-content_light" id="skils">
+        <div class="container">
+            <h2 class="header-base section-content__header">ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ</h2>
+            <ul class="section-content__list">
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">адаптивная верстка под различные устройства, как с применением библиотеки bootstrap, так и без неё.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">подключаю и настраиваю требуемые js и jquery- плагины, пишу свои небольшие компоненты на javascript.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">применяю css -препроцессор SASS, HTML – шаблонизатор Pug.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">знаком и применяю методологию БЭМ</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">знаком и использую сборщик Gulp.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">PHP базовый уровень, знаком с ООП, концепцией MVC - выполнял учебные проекты.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">знаком с Yii2 - выполнял учебный проект.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">знаком и использую Git.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section-content section-content_dark" id="projects">
+        <div class="container">
+            <h2 class="header-base section-content__header">ПРОЕКТЫ</h2>
+            <ul class="section-content__list">
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">верстка для команды &quot;NetGon&quot;</p>
+                    <a class="section-content__link" href="https://themeforest.net/item/shlok-construction-and-architect-html-template/21155081?s_rank=3">Shlok</a>
+                    <p class="section-content__paragraph">(исходный код предоставлю по запросу)</p>
+                </li>
+                <li class="section-content__list-item">
+                    <a class="section-content__link" href="https://github.com/Gmol78/responsive-menu">отзывчивое main-nav (pug, js, sass)</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section-content section-content_light" id="about">
+        <div class="container">
+            <h2 class="header-base section-content__header">О СЕБЕ</h2>
+            <ul class="section-content__list">
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">умею работать в команде, адекватно отношусь к трудностям и всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».</p>
+                    <p class="section-content__paragraph">Сохраняю и поддерживаю товарищескую атмосферу. Умею «дожать» проект.</p>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">готов к выполнению тестовых заданий.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section-content section-content_dark" id="contacts">
+        <div class="container">
+            <h2 class="header-base section-content__header">КОНТАКТЫ</h2>
+            <ul class="section-content__list">
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">телефон: +7-903-840-04-00; +7-953-422-74-91</p>
+                </li>
+                <li class="section-content__list-item">
+                    <a class="section-content__link" href="mailto:steklodekor@inbox.ru">e-mal: steklodekor@inbox.ru</a>
+                </li>
+                <li class="section-content__list-item">
+                    <p class="section-content__paragraph">skype: igor_mol78</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <span class="footer__copiright">
+            Молочников Игорь &copy;
+
+        </span>
+        <span class="footer__year">2018</span>
+    </footer>
+    <script src="js/jquery.min.js">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
