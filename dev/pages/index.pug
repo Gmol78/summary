@@ -3,6 +3,22 @@ extends ./templates/layout.pug
 block content
     include ../components/section-education/section-education.pug
     include ../components/section-content/section-content.pug
+    include ../components/header-base/header-base
+    include ../components/job/job
+
+    section.section-expirience
+        .container
+            +header-base('ОПЫТ РАБОТЫ').section-expirience__header
+            -
+                var data = {
+                    date: '17.05.2018 - наст.время',
+                    company: 'OOO Групп-инфо',
+                    position: 'веб-разработчик',
+                    charge: ['обязанности', 'ещё обязанности']
+                }
+
+            +job(data)
+
     -
         var data_skils = [
             [{'text': 'адаптивная верстка под различные устройства, как с применением библиотеки bootstrap, так и без неё.'}],
@@ -31,7 +47,7 @@ block content
     +section-content('ПРОЕКТЫ', data_projects).section-content_dark#projects
     -
         var data_about = [
-            [{'text': 'умею работать в команде, адекватно отношусь к трудностям  и всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».'},
+            [{'text': 'умею работать в команде, адекватно отношусь к критике, всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».'},
              {'text': 'Сохраняю и поддерживаю товарищескую атмосферу.  Умею «дожать» проект.'}
             ],
             [{'text': 'готов к выполнению тестовых заданий.'}]

@@ -1,0 +1,12 @@
+
+mixin job(data)
+    .job
+        .row
+            .col-sm-4
+                .job__date=data.date
+            .col-sm-8
+                .job__company=data.company
+                .job__position=data.position
+                ul.job__charge-list
+                    each val in data.charge
+                        li.job__charge-item=val
