@@ -13,6 +13,8 @@ function MainMenuGm(id, params) {
     this.menu = document.getElementById(id);
     this.button = this.menu.getElementsByClassName('navigation-main__minimize-icon')[0];
     this.menuList = this.menu.getElementsByClassName('navigation-main__menu-list')[0];
+    this.menuItems = this.menu.getElementsByClassName('navigation-main__link');
+
 
     for (var i = 0; i < this.button.children.length; i++) {
         this.button.children[i].style.transitionDuration = duration + 's';
@@ -53,6 +55,13 @@ function MainMenuGm(id, params) {
     this.button.onclick = function () {
         self.menuToggle();
     };
+
+    for(var j=0; j< this.menuItems.length; j++){
+        this.menuItems[j].onclick = function () {
+            self.menuClose();
+            self.removeButtonOpened();
+        }
+    }
 
 }
 /**
