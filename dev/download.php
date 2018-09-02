@@ -1,6 +1,6 @@
 <?php
 
-define('FILE_NAME', 'resume_molochnikov_intern.pdf');
+define('FILE_NAME', 'resume_molochnikov_dev.pdf');
 
 $root = dirname(__FILE__);
 $path = $root.'/'.FILE_NAME;

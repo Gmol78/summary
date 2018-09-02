@@ -4,60 +4,84 @@ block content
     include ../components/section-education/section-education.pug
     include ../components/section-content/section-content.pug
     include ../components/header-base/header-base
+    include ../components/section-expirience/section-expirience
     include ../components/job/job
 
-    section.section-expirience
-        .container
-            +header-base('ОПЫТ РАБОТЫ').section-expirience__header
-            -
-                var data = {
-                    date: '17.05.2018 - наст.время',
-                    company: 'OOO Групп-инфо',
-                    position: 'веб-разработчик',
-                    charge: ['обязанности', 'ещё обязанности']
-                }
+    +section-expirience('ОПЫТ РАБОТЫ')#jobs
+        -
+            var data_job1 = {date: '17.05.2018 - настоящее время',
+            company: 'ООО "Групп- инфо"',
+            position: 'веб- разработчик',
+            charge: ['разработка структуры, макета, функционала и оформления сайта согласно пожеланиям заказчика',
+            'верстка сайтов, написание клиентской (ajax) и серверной части "кнопок вызова" и форм обратной связи',
+            'интеграция верстки с CMS (wordpress)',
+            'размещение на сервере и поддержка сайтов компании']}
+        +job(data_job1)
 
-            +job(data)
+        -
+            var data_job2 = {date: '17.07.2017 - 17.05.2018',
+            company: '"Netgon" (фриланс)',
+            position: 'верстальщик',
+            charge: ['верстка сайтов для "Themforest" по psd- макету',
+            'правка шаблонов (twig) для CMS OpenCart']}
+        +job(data_job2)
+
+
 
     -
         var data_skils = [
-            [{'text': 'адаптивная верстка под различные устройства, как с применением библиотеки bootstrap, так и без неё.'}],
-            [{'text': 'подключаю и настраиваю требуемые js и jquery- плагины, пишу свои небольшие компоненты  на javascript.'}],
-            [{'text': 'применяю css -препроцессор SASS, HTML – шаблонизатор Pug.'}],
-            [{'text': 'знаком и применяю методологию БЭМ'}],
-            [{'text': 'знаком и использую сборщик Gulp.'}],
-            [{'text': 'PHP базовый уровень, знаком с ООП, концепцией MVC - выполнял учебные проекты.'}],
-            [{'text': 'знаком с Yii2  - выполнял учебный проект.'}],
-            [{'text': 'знаком и использую Git.'}]
+        [{'text': 'адаптивная верстка, bootstrap, верстка по psd-макету.'}],
+        [{'text': 'интеграция верстки с CMS (wordpress)'}],
+        [{'text': 'написание обработчиков форм обратной связи: клиентская и серверная части'}],
+        [{'text': 'работа с чужим кодом'}],
+        [{'text': 'подключаю и настраиваю требуемые js и jquery- плагины, пишу свои небольшие компоненты  на javascript.'}],
+        [{'text': 'применяю css -препроцессор SASS, HTML – шаблонизатор Pug.'}],
+        [{'text': 'применяю методологию БЭМ'}],
+        [{'text': 'знаком c Gulp.'}],
+        [{'text': 'PHP базовый уровень, знаком с ООП, концепцией MVC - выполнял учебные проекты.'}],
+        [{'text': 'знаком с Yii2  - выполнял учебный проект.'}],
+        [{'text': 'знаком c Git.'}]
         ]
     +section-content('ПРОФЕССИОНАЛЬНЫЕ НАВЫКИ', data_skils).section-content_light#skils
     -
         var data_projects = [
         [
-            {'text': 'верстка для команды "NetGon"'},
-            {'link': 'https://themeforest.net/item/shlok-construction-and-architect-html-template/21155081?s_rank=3',
-            'text': 'Shlok'},
-            {'text': '(исходный код предоставлю по запросу)'}
+        {'text': 'верстка для "Themforest"'},
+        {'link': 'https://themeforest.net/item/shlok-construction-and-architect-html-template/21155081?s_rank=3',
+        'text': 'Shlok'},
+        {'text': '(исходный код предоставлю по запросу)'}
         ],
         [
-            {'link': 'https://github.com/Gmol78/responsive-menu',
-             'text': 'отзывчивое main-nav (pug, js, sass)'}
+        {'link': 'https://github.com/Gmol78/responsive-menu',
+        'text': 'отзывчивое main-nav (pug, js, sass): исходный код'}
+        ],
+        [
+        {'text': 'cайт по ремонту компьютеров и ноутбуков',
+         'link': 'http://рнд.пкремонт.рф'
+        }
+        ],
+        [
+        {'text': 'сайт для производителя гибкого камня',
+         'link': 'http://гибкий-камень.рус'}
+        ],
+        [
+        {'text': 'исходный код этой странички ) (gulp, pug, sass)',
+        'link': 'https://github.com/Gmol78/summary'}
         ]
         ]
-    +section-content('ПРОЕКТЫ', data_projects).section-content_dark#projects
+    +section-content('ПРОЕКТЫ', data_projects)#projects
     -
         var data_about = [
-            [{'text': 'умею работать в команде, адекватно отношусь к критике, всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».'},
-             {'text': 'Сохраняю и поддерживаю товарищескую атмосферу.  Умею «дожать» проект.'}
-            ],
-            [{'text': 'готов к выполнению тестовых заданий.'}]
-
+        [{'text': 'адекватно отношусь к критике, всевозможным «уточнениям» и «изменениям», «пожеланиям заказчика».'}],
+        [{'text': 'cохраняю и поддерживаю товарищескую атмосферу в коллективе.'}],
+        [{'text': 'умею "дожать" проект'}],
+        [{'text': 'непрерывно самообучаюсь'}]
         ]
     +section-content('О СЕБЕ', data_about).section-content_light#about
     -
         var data_contacts = [
         [{'text': 'телефон: +7-903-840-04-00; +7-953-422-74-91'}],
-        [{'link':'mailto:steklodekor@inbox.ru', 'text': 'e-mal: steklodekor@inbox.ru'}],
+        [{'link':'mailto:imoldev@yandex.ru', 'text': 'e-mal: imoldev@yandex.ru'}],
         [{'text': 'skype: igor_mol78'}]
         ]
-    +section-content('КОНТАКТЫ', data_contacts).section-content_dark#contacts
+    +section-content('КОНТАКТЫ', data_contacts)#contacts
